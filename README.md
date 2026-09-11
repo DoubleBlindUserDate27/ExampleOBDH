@@ -65,4 +65,4 @@ make
 make obdh
 ```
 
-3) Use your preferred serial software to check the actor firing sequence and token flow
+3) Use your preferred serial software to check the actor firing sequence. Compare the generated tokens with the ForSyDe simulation output
