@@ -1,0 +1,13 @@
+#
+# Hello world Waf script
+#
+
+# Waf build script for an RTEMS Hello
+import rtems_waf.rtems as rtems
+
+def build(bld):
+    rtems.build(bld)
+
+    bld(features = 'c cprogram',
+    target = 'obdh.exe',
+    source = bld.path.ant_glob('src/**/*.c'))
