@@ -43,6 +43,16 @@ To simulate the OBDH example in ForSyDe, open the terminal in the ForSyDe folder
 stack ghci --package=forsyde-shallow OBDH.hs
 ```
 
+In the GHC interpreter:
+```sh
+ghci> obdh s_tc s_ev
+({1,4,7,10},{4,10},{9,18})
+ghci> obdh s_tc s_ev1
+({1,4,7,10},{4,10,16,22},{9,18,27,36})
+ghci> obdh s_tc s_ev2
+({1,4,7,10},{},{})
+```
+
 ## Running the OBDH example in the NUCLEO board ##
 
 1) Open the examples folder and build with the make command:
@@ -54,3 +64,5 @@ make
 ```sh
 make obdh
 ```
+
+3) Use your preferred serial software to check the actor firing sequence and token flow
